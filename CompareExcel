@@ -1,0 +1,44 @@
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.concurrent.TimeoutException;
+
+import com.junit.assertEquals;
+
+import io.github.alekseysotnikov.cmd.core.Cmd;
+import io.github.alekseysotnikov.cmd.listeners.WorkDir;
+
+public class Excelcompare {
+
+	public static void main(String[] args) throws IOException, TimeoutException, InterruptedException {
+		// TODO Auto-generated method stub
+		
+		 File expected = new File("C:\\Users\\vg86168\\Desktop\\BulkFiles - EPS\\File Mapping_BAKER_V1.xlsx");
+		 File result = new File("C:\\Users\\vg86168\\Desktop\\BulkFiles - EPS\\File Mapping_BAKER_V2.xlsx");
+		
+		compareXlsx (expected,  result);		 
+	
+	}
+	
+	public static void compareXlsx (File expected, File result) throws IOException {
+		System.setProperty("user.dir", "C:\\Users\\vg86168\\Desktop\\Workspace\\ExcelCompProject\\Beyond Compare 4");
+		System.out.println((System.getProperty("user.dir")));
+		String ScriptPath="@C:\\Users\\vg86168\\Desktop\\BeyondCopare Files\\BYrunExcelSideBySideAll.txt";
+		String arg1="C:\\Users\\vg86168\\Desktop\\BeyondCopare Files\\Excel1.txt";
+		String arg2="C:\\Users\\vg86168\\Desktop\\BeyondCopare Files\\Excel3.txt";
+		String ResultPath="C:\\Users\\vg86168\\Desktop\\BeyondCopare Files\\ExcelSideBySidereportAll.html";		
+		
+		try{
+			Process p = new ProcessBuilder(System.getProperty("user.dir")+"//BCompare",ScriptPath, arg1, arg2,ResultPath).start();
+			
+		}catch(IOException e){
+			e.printStackTrace();
+			
+		}	
+	
+		
+	}
+
+	
+
+}
