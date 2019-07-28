@@ -1,0 +1,25 @@
+Text File
+=============================
+Report Side by side:
+text-report layout:side-by-side options:display-all output-to:"%3" output-options:html-color "%1" "%2"
+
+command to run
+bcompare.exe "@C:\Users\vg86168\Desktop\BeyondCopare Files\BYruntextSideBySideAll.txt" "C:\Users\vg86168\Desktop\BeyondCopare Files\Log1.txt" "C:\Users\vg86168\Desktop\BeyondCopare Files\Log2.txt" "C:\Users\vg86168\Desktop\BeyondCopare Files\SideBySidereportAll.html"
+
+============================
+Report by summary
+text-report layout:Summary options:display-all output-to:"%3" output-options:html-color "%1" "%2"
+
+command to run
+bcompare.exe "@C:\Users\vg86168\Desktop\BeyondCopare Files\BYruntextsummaryAll.txt" "C:\Users\vg86168\Desktop\BeyondCopare Files\Log1.txt" "C:\Users\vg86168\Desktop\BeyondCopare Files\Log2.txt" "C:\Users\vg86168\Desktop\BeyondCopare Files\SummaryreportAll.html"
+
+
+================================
+----------------------------------------------------------------------------------
+Excel File
+
+Report Side by side:
+data-report layout:side-by-side options:ignore-unimportant,display-all output-to:"%3" output-options:html-color "%1" "%2"
+
+command to run
+bcompare.exe "@C:\Users\vg86168\Desktop\BeyondCopare Files\BYrunExcelSideBySideAll.txt" "C:\Users\vg86168\Desktop\BeyondCopare Files\Excel1.xlsx" "C:\Users\vg86168\Desktop\BeyondCopare Files\Excel3.xlsx" "C:\Users\vg86168\Desktop\BeyondCopare Files\ExcelSideBySidereportAll.html"
